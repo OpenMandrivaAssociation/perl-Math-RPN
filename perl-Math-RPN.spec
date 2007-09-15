@@ -1,6 +1,6 @@
 %define module 	Math-RPN
 %define version 1.08
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary:	Perl extension for Reverse Polish Math Expression Evaluation
 Name: 		perl-%{module}
