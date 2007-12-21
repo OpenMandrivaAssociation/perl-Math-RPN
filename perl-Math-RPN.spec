@@ -10,6 +10,7 @@ License:	GPL or Artistic
 URL:		http://search.cpan.org/dist/%{module}
 Group:		Development/Perl
 Source0:	ftp.perl.org/pub/CPAN/modules/by-module/Math/%{module}-%{version}.tar.bz2
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 BuildArch:	noarch
 
 %description
