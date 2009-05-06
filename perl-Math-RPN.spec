@@ -1,6 +1,6 @@
 %define module 	Math-RPN
-%define version 1.08
-%define release %mkrel 7
+%define version 1.09
+%define release %mkrel 1
 
 Summary:	Perl extension for Reverse Polish Math Expression Evaluation
 Name: 		perl-%{module}
@@ -9,7 +9,7 @@ Release: 	%{release}
 License:	GPL or Artistic
 URL:		http://search.cpan.org/dist/%{module}
 Group:		Development/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/%{module}-%{version}.tar.bz2
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/%{module}-%{version}.tar.gz
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 BuildArch:	noarch
 
@@ -26,16 +26,14 @@ return the result or stack, depending on context. If the function
 is called in an array context, it will return the entire remaining stack.
 
 %prep
-%setup -q -n Math
+%setup -q -n  %{module}-%{version}
 
 %build
-cd RPN
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-cd RPN
 %makeinstall_std
 
 %clean 
@@ -43,8 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc RPN/Changes
+%doc Changes
 %{perl_vendorlib}/Math/RPN.pm
-%{perl_vendorlib}/auto/Math/RPN
 %{_mandir}/man?/*
 
