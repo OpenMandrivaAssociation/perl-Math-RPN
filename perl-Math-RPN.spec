@@ -1,17 +1,18 @@
-%define module 	Math-RPN
-%define version 1.09
-%define release %mkrel 1
+%define upstream_name 	 Math-RPN
+%define upstream_version 1.09
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Perl extension for Reverse Polish Math Expression Evaluation
-Name: 		perl-%{module}
-Version: 	%{version}
-Release: 	%{release}
-License:	GPL or Artistic
-URL:		http://search.cpan.org/dist/%{module}
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/%{module}-%{version}.tar.gz
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildArch:	noarch
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Reverse Polish Notation is briefly a stack-based way of writing
@@ -26,7 +27,7 @@ return the result or stack, depending on context. If the function
 is called in an array context, it will return the entire remaining stack.
 
 %prep
-%setup -q -n  %{module}-%{version}
+%setup -q -n  %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -44,4 +45,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes
 %{perl_vendorlib}/Math/RPN.pm
 %{_mandir}/man?/*
-
