@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 1.11
-Release:	1
+Release:	2
 
 Summary:	Perl extension for Reverse Polish Math Expression Evaluation
 License:	GPL+ or Artistic
