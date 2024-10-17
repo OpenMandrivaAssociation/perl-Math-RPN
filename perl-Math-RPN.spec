@@ -8,7 +8,7 @@ Release:	3
 Summary:	Perl extension for Reverse Polish Math Expression Evaluation
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Math/Math-RPN-1.11.tar.gz
 
 BuildRequires:	perl-devel
