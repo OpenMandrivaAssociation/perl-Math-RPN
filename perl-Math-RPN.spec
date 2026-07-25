@@ -2,14 +2,14 @@
 %define upstream_version 1.11
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 1.11
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 
 Summary:	Perl extension for Reverse Polish Math Expression Evaluation
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Math/Math-RPN-1.11.tar.gz
+Url:		https://github.com/szabgab/Math-RPN
+Source0:	https://cpan.metacpan.org/authors/id/S/SZ/SZABGAB/Math-RPN-1.11.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
