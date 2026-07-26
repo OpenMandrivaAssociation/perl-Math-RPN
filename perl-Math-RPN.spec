@@ -1,9 +1,7 @@
 %define upstream_name 	 Math-RPN
-%define upstream_version 1.11
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	4
+Version:	1.11
+Release:	5
 
 Summary:	Perl extension for Reverse Polish Math Expression Evaluation
 License:	GPL+ or Artistic
@@ -28,7 +26,7 @@ return the result or stack, depending on context. If the function
 is called in an array context, it will return the entire remaining stack.
 
 %prep
-%setup -q -n  %{upstream_name}-%{upstream_version}
+%setup -q -n  %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -46,9 +44,7 @@ make
 %changelog
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.90.0-1mdv2010.0
 + Revision: 403858
-- rebuild using %%perl_convert_version
-
-* Wed May 06 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.09-1mdv2010.0
+- rebuild using %1.11 Wed May 06 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.09-1mdv2010.0
 + Revision: 372509
 - forgot to update the source tarball
 - update to 1.09
